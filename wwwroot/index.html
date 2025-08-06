@@ -6,7 +6,6 @@
     <title>Ducato App</title>
     <link rel="manifest" href="manifest.json" />
     <base href="/" />
-    <link href="manifest.json" rel="manifest" />
     <link href="css/app.css" rel="stylesheet" />
     <meta name="theme-color" content="#ffffff" />
 </head>
@@ -14,17 +13,24 @@
   <div id="app">Loading...</div>
   <script src="_framework/blazor.webassembly.js"></script>
 
-<script>
-    window.localStorageHelper = {
-        saveState: function (key, value) {
-            localStorage.setItem(key, JSON.stringify(value));
-        },
-        loadState: function (key) {
-            const item = localStorage.getItem(key);
-            return item ? JSON.parse(item) : null;
-        }
-    };
-</script>
-</body>
+  <script>
+      window.localStorageHelper = {
+          saveState: function (key, value) {
+              localStorage.setItem(key, JSON.stringify(value));
+          },
+          loadState: function (key) {
+              const item = localStorage.getItem(key);
+              return item ? JSON.parse(item) : null;
+          }
+      };
+  </script>
 
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./pwabuilder-sw.js')
+        .then(reg => console.log("✅ Service worker registrado:", reg))
+        .catch(err => console.error("❌ Error al registrar el service worker:", err));
+    }
+  </script>
+</body>
 </html>
