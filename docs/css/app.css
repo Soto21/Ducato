@@ -1,0 +1,58 @@
+.ducato-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ducato-image {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.seat-label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #000;
+    pointer-events: none;
+    white-space: nowrap;
+    text-shadow: 0 0 4px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.emoji {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.name {
+    font-size: 0.75rem;
+    line-height: 1;
+    color: #222; /* gris muy oscuro */
+    background-color: rgba(255, 255, 255, 0.75); /* blanco semitransparente */
+    padding: 2px 6px;
+    border-radius: 6px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.controls {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+    .controls button {
+        margin: 0 0.5rem;
+        padding: 0.4rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #f3f3f3;
+    }

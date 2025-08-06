@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ducato App</title>
+    <link rel="manifest" href="manifest.json" />
+    <base href="/" />
+    <link href="manifest.json" rel="manifest" />
+    <link href="css/app.css" rel="stylesheet" />
+    <meta name="theme-color" content="#ffffff" />
+</head>
+<body>
+  <div id="app">Loading...</div>
+  <script src="_framework/blazor.webassembly.js"></script>
+
+<script>
+    window.localStorageHelper = {
+        saveState: function (key, value) {
+            localStorage.setItem(key, JSON.stringify(value));
+        },
+        loadState: function (key) {
+            const item = localStorage.getItem(key);
+            return item ? JSON.parse(item) : null;
+        }
+    };
+</script>
+</body>
+
+</html>

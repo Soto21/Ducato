@@ -1,0 +1,26 @@
+{
+  "name": "Ducato App",
+  "short_name": "Ducato",
+<<<<<<< HEAD
+  "start_url": "/Ducato/index.html",
+  "scope": "/Ducato/",
+=======
+  "start_url": "/nombre-repo/index.html",
+  "scope": "/nombre-repo/",
+>>>>>>> 76691b0a12337c52c5c81b07368dd77d03b8c28b
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
